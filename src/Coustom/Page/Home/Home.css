@@ -1,0 +1,49 @@
+.social-icon i {
+    font-size: 20px;
+    color: #fff !important;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 10px;
+    margin: 10px;
+    border-radius: 50%;
+    transition: all 0.3s ease-in;
+}
+
+.social-icon i:hover {
+    background: #7280ff;
+    border: 1px solid #7280ff;
+}
+
+.btn-color{
+    background: #7280ff;
+    transition: all 0.3s ease-in;
+}
+
+.btn-color:hover{
+    color: #7280ff;
+    background-color: #fff;
+}
+
+.img-me {
+    border-top: 22px solid #7280ff;
+    border-left: 22px solid #7280ff;
+    border-bottom: 22px solid #000;
+    border-right: 22px solid #000;
+}
+
+/* about me */
+
+h2.title {
+    position: relative;
+    z-index: 5;
+}
+
+.title span.bg-text {
+    position: absolute;
+    text-transform: uppercase;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 85px;
+    z-index: -1;
+    opacity: 0.07;
+}
