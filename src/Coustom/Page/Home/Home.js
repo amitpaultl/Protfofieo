@@ -37,41 +37,42 @@ const Home = () => {
                     <span class="bg-text">Project</span>
                 </h2>
                 <div className="container mx-auto">
-                    <div className="flex justify-between">
+                    <div className=" gap-4  grid  md:grid-cols-3 sm:grid-cols-1">
 
-                        <div className="card card-compact w-96 bg-base-100 shadow-xl">
+                        <div className="card card-compact  w-full bg-base-100 shadow-xl">
                             <figure><img src={car} alt="Shoes" /></figure>
                             <div className="card-body">
                                 <h2 className="card-title">Car Selling Website</h2>
-
+                                <p>My web site any on create account user , seller . They  can sell and buy car . </p>
                                 <div className="card-actions justify-between">
                                     <a href='https://cars-63d13.web.app/' target={'_blank'} className="btn btn-primary">Code</a>
                                     <a href='https://github.com/amitpaultl/car-client' target={'_blank'} className="btn btn-primary">Live side</a>
                                 </div>
                             </div>
                         </div>
-                        <div className="card card-compact w-96 bg-base-100 shadow-xl">
+                        <div className="card card-compact w-full bg-base-100 shadow-xl">
                             <figure><img src={yoga} alt="Shoes" /></figure>
                             <div className="card-body">
                                 <h2 className="card-title">Yoga Service Website</h2>
-
+                                <p>Any user buy yoga service. </p>
                                 <div className="card-actions justify-between">
                                     <a href='https://psychologist-799e7.firebaseapp.com/' className="btn btn-primary">Code</a>
                                     <a href='https://github.com/amitpaultl/psychologist-client1' className="btn btn-primary">Live side</a>
                                 </div>
                             </div>
                         </div>
-                        <div className="card card-compact w-96 bg-base-100 shadow-xl">
+                        <div className="card card-compact w-full bg-base-100 shadow-xl">
                             <figure><img src={education} alt="Shoes" /></figure>
                             <div className="card-body">
                                 <h2 className="card-title">E-education Website</h2>
-
+                                <p></p>
                                 <div className="card-actions justify-between">
                                     <a target={'_blank'} href='https://github.com/amitpaultl/e-school' className="btn btn-primary">Code</a>
                                     <a href='https://amitpaultl.github.io/e-school/' target={'_blank'} className="btn btn-primary">Live side</a>
                                 </div>
                             </div>
                         </div>
+                      
 
                     </div>
 
