@@ -43,7 +43,7 @@ const Home = () => {
                 </h2>
                 <div className="hero ">
                     <div className="hero-content flex-col lg:flex-row ">
-                        <img src={aboutme} className="max-w-sm  rounded-lg shadow-2xl img-me" />
+                        <img src={aboutme} className="md:max-w-sm  rounded-lg shadow-2xl img-me" />
                         <div className='w-1/2 ml-16'>
                             <p className="py-6 text-2xl">Hi I'm Amit kumar paul. I have  over 3+ years of
                                 experience in web design and development. Experience in Html,
@@ -200,7 +200,7 @@ const Home = () => {
                     <p><strong>Tools:</strong> Git & GitHub, NPM, Firebase, Netlify, Heroku, VS Code, Chrome DevTools, Figma, Adobe XD</p>
                 </div>
                 <div className="skill-icon md:flex justify-center my-6">
-                    <img src={react} alt="" />
+                    <img src={react} alt="" className=' w' />
                     <img src={tailwind} alt="" />
                     <img src={mongodb} alt="" />
                     <img src={node} alt="" />
@@ -317,7 +317,7 @@ const Home = () => {
 
                             </form>
                         </div>
-                        <div className='w-1/2 ml-16 py-6 text-2xl leading-10'>
+                        <div className='w-1/2 md:ml-16 py-6 text-2xl leading-10'>
 
 
                             <p> <strong>Location: </strong> <span className='text-xl'>Jashore Khulna Bangladesh</span></p>

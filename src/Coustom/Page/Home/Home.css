@@ -43,7 +43,7 @@ h2.title {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    font-size: 85px;
+    font-size: 60px;
     z-index: -1;
     opacity: 0.07;
 

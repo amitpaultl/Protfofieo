@@ -18,7 +18,7 @@ const Hero = () => {
     return (
         <div className="hero min-h-screen" style={{ backgroundImage: `url("https://geniusdevs.com/themeforest/gfolio/v3-two/assets/images/home-bg.jpg")` }}>
             <div className="hero-overlay bg-opacity-60"></div>
-            <div className="hero-content text-center text-neutral-content">
+            <div className="hero-content p-0 text-center text-neutral-content">
                 <div className="max-w-md">
 
                     <div className="avatar">
