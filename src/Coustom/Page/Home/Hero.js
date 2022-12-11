@@ -1,14 +1,19 @@
+import { useForm } from '@formspree/react';
 import React from 'react';
+import { toast, Toaster } from 'react-hot-toast';
 import { FaFacebookF, FaInstagram, FaLinkedinIn, FaTwitter, FaWhatsapp } from "react-icons/fa";
 import { Typewriter } from 'react-simple-typewriter';
 // import Typewriter from 'typewriter-effect/dist/core';
 import Amit from '../../Asserts/image/amit.jpg'
 
+// import { useForm, ValidationError } from '@formspree/react';
+
 const Hero = () => {
-    // new Typewriter('#typewriter', {
-    //     strings: ['Hello', 'World'],
-    //     autoStart: true,
-    // });
+ 
+    const [state, handleSubmit] = useForm("mlevqzpe");
+    if (state.succeeded) {
+        toast.success('Successfully sent!')
+      }
 
     return (
         <div className="hero min-h-screen" style={{ backgroundImage: `url("https://geniusdevs.com/themeforest/gfolio/v3-two/assets/images/home-bg.jpg")` }}>
@@ -56,29 +61,29 @@ const Hero = () => {
             <div className="modal">
                 <div className="modal-box relative">
                     <label htmlFor="my-modal-3" className="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
-                    <form>
+                    <form onSubmit={handleSubmit}>
 
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text">Name</span>
                             </label>
-                            <input type="text" name='name' placeholder="Name" className="input input-bordered" />
+                            <input type="text" name='name' placeholder="Name" className="input input-bordered text-inheritt" />
                         </div>
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text">Email</span>
                             </label>
-                            <input type="email" name='email' placeholder="Email" className="input input-bordered" />
+                            <input type="email" name='email' placeholder="Email" className="input input-bordered text-inheritt" />
                         </div>
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text">Comment or Message</span>
                             </label>
-                            <textarea className="input input-bordered" name="text" id="" cols="30" rows="10"></textarea>
+                            <textarea className="input input-bordered text-inheritt" name="text" id="" cols="30" rows="10"></textarea>
                         </div>
                         <div className='my-3 text-center'>
 
-                            <button className="btn btn-color ">SUBMIT</button>
+                            <button type="submit" disabled={state.submitting} className="btn btn-color ">SUBMIT</button>
                         </div>
                     </form>
                 </div>
@@ -87,7 +92,7 @@ const Hero = () => {
 
 
 
-
+            <Toaster />
 
         </div>
     );

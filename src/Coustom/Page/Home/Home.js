@@ -2,6 +2,8 @@ import React, { useRef } from 'react';
 import Hero from './Hero';
 import './Home.css'
 import aboutme from '../../Asserts/image/depositphotos_42748913-stock-photo-about-me.jpg'
+import { FaFacebookF, FaInstagram, FaLinkedinIn, FaTwitter, FaWhatsapp } from "react-icons/fa";
+
 import car from '../../Asserts/image/car.jpg'
 import yoga from '../../Asserts/image/yoga-meditation-concept-woman-silhouette-healthy-meditating-pose-back-view-sun-light-rays-56996585.jpg'
 import education from '../../Asserts/image/elearning-getty.jpg'
@@ -18,17 +20,23 @@ import mongodb from '../../Asserts/image/mongodb.jpg'
 import node from '../../Asserts/image/node.jpg'
 import Swiper from 'react-id-swiper';
 import SimpleSwiper from '../Slider';
-
+import { CiLocationOn } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
+import { toast, Toaster } from 'react-hot-toast';
+import { useForm } from '@formspree/react';
 
 const Home = () => {
-
+    const [state, handleSubmit] = useForm("mlevqzpe");
+    if (state.succeeded) {
+        toast.success('Successfully sent!')
+      }
 
 
     return (
         <div >
             <Hero></Hero>
             {/* about me  */}
-            <div className="py-5">
+            <div className="py-5" id='aboutMe'>
                 <h2 className="title text-center text-5xl font-bold py-7">
                     About <span className="color">Me</span>
                     <span className="bg-text">About</span>
@@ -210,36 +218,37 @@ const Home = () => {
                 <div className="container mx-auto">
                     <div className=" gap-4  grid  md:grid-cols-3 sm:grid-cols-1">
 
-                        <div className="card card-compact  w-full bg-base-100 shadow-xl">
+                        <div className="card card-compact  w-full  shadow-xl">
                             <figure><img src={car} alt="Shoes" /></figure>
                             <div className="card-body">
                                 <h2 className="card-title">Car Selling Website</h2>
                                 <p>My web site any on create account user , seller . They  can sell and buy car . </p>
-                                <div className="card-actions justify-between">
-                                    <a href='https://cars-63d13.web.app/' target={'_blank'} className="btn btn-primary">Code</a>
-                                    <a href='https://github.com/amitpaultl/car-client' target={'_blank'} className="btn btn-primary">Live side</a>
+                                <div className="card-actions justify-center">
+                                    <Link to='/car' className="btn btn-primary">More</Link>
+                                   
                                 </div>
                             </div>
                         </div>
-                        <div className="card card-compact w-full bg-base-100 shadow-xl">
-                            <figure><img src={yoga} alt="Shoes" /></figure>
-                            <div className="card-body">
-                                <h2 className="card-title">Yoga Service Website</h2>
-                                <p>Any user buy yoga service. </p>
-                                <div className="card-actions justify-between">
-                                    <a href='https://psychologist-799e7.firebaseapp.com/' className="btn btn-primary">Code</a>
-                                    <a href='https://github.com/amitpaultl/psychologist-client1' className="btn btn-primary">Live side</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="card card-compact w-full bg-base-100 shadow-xl">
+                        <div className="card card-compact w-full  shadow-xl">
                             <figure><img src={education} alt="Shoes" /></figure>
                             <div className="card-body">
-                                <h2 className="card-title">E-education Website</h2>
+                                <h2 className="card-title">Training website</h2>
+                                <p>In contrast, frameworks are used to build functions. Many developers have written frameworks for Node.js like</p>
+                                <div className="card-actions justify-center">
+                                    <Link to='/Training' className="btn btn-primary">More</Link>
+                                   
+                                </div>
+                            </div>
+                        </div>
+                        <div className="card card-compact w-full  shadow-xl">
+                            <figure><img src={yoga} alt="Shoes" /></figure>
+                            <div className="card-body">
+                                <h2 className="card-title">My Site is yoga service site</h2>
+                                <p>Any one user login in my web site. and take service it very easy login system. it is use mongodb databas and jwt token so it is very high security user data</p>
                                 <p></p>
-                                <div className="card-actions justify-between">
-                                    <a target={'_blank'} href='https://github.com/amitpaultl/e-school' className="btn btn-primary">Code</a>
-                                    <a href='https://amitpaultl.github.io/e-school/' target={'_blank'} className="btn btn-primary">Live side</a>
+                                <div className="card-actions justify-center">
+                                    <Link  to='yoga' className="btn btn-primary">More</Link>
+                                   
                                 </div>
                             </div>
                         </div>
@@ -249,7 +258,7 @@ const Home = () => {
 
                 </div>
             </div>
-            {/*  */}
+            {/* blog area */}
 
 
             <h2 className="title text-center text-5xl font-bold py-7 mb-9">
@@ -258,6 +267,81 @@ const Home = () => {
             </h2>
             <SimpleSwiper></SimpleSwiper>
 
+            {/* concat area */}
+            <div className=' my-24'>
+                <h2 className="title text-center text-5xl font-bold py-7 mb-9">
+                    Concat <span className="color">Me</span>
+                    <span className="bg-text">Concat</span>
+                </h2>
+                <div className="container mx-auto">
+
+
+
+
+
+                    <div className="hero-content flex-col lg:flex-row ">
+                        <div className="card w-full ">
+                            <form onSubmit={handleSubmit}>
+
+                            
+                            <div className="contact-from">
+                                <div className="form-control">
+                                    <label className="label">
+                                        <span className="label-text text-white">Name</span>
+                                    </label>
+                                    <input type="text" name='name' placeholder="Name" className="input text-inheritt input-bordered" />
+                                </div>
+                                <div className="form-control">
+                                    <label className="label">
+                                        <span className="label-text text-white">Email</span>
+                                    </label>
+                                    <input type="email" name='email' placeholder="Email" className="input text-inheritt input-bordered" />
+                                </div>
+                                <div className="form-control">
+                                    <label className="label">
+                                        <span className="label-text text-white">Subject</span>
+                                    </label>
+                                    <input type="text" name='subject' placeholder="subject" className="input text-inheritt input-bordered" />
+                                </div>
+                                <div className="form-control">
+                                    <label className="label">
+                                        <span className="label-text text-white">Message</span>
+                                    </label>
+                                    <textarea type="text" name='text' placeholder="Message" className="input text-inheritt h-60 input-bordered" />
+                                </div>
+                                <div className="text-center my-5">
+
+                                    <button className="btn btn-color">Submit</button>
+                                </div>
+                            </div>
+
+                            </form>
+                        </div>
+                        <div className='w-1/2 ml-16 py-6 text-2xl leading-10'>
+
+
+                            <p> <strong>Location: </strong> <span className='text-xl'>Jashore Khulna Bangladesh</span></p>
+                            <p>  <strong>Phone:</strong>  <span className='text-xl'>+8801941231211</span></p>
+                            <p>  <strong>Email:</strong>  <span className='text-xl'>amitpaultl@gmail.com</span></p>
+                            <div className="social-icon flex justify-center my-3">
+
+                                <i><a href='https://www.facebook.com/profile.php?id=100006098568214' target={'_blank'}><FaFacebookF></FaFacebookF></a></i>
+                                <i><a href='#' target={'_blank'}><FaInstagram></FaInstagram></a> </i>
+                                <i><a href='#' target={'_blank'}> <FaLinkedinIn></FaLinkedinIn></a></i>
+                                <i><a href='#' target={'_blank'}> <FaTwitter></FaTwitter></a></i>
+                                <i><a href='#' target={'_blank'}><FaWhatsapp></FaWhatsapp></a> </i>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+
+            <Toaster />
         </div>
     );
 };
