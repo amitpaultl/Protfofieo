@@ -5,7 +5,7 @@ import Header from '../Shere/Header/Header';
 
 const Main = () => {
     return (
-        <div>
+        <div className='font-serif' style={{ backgroundColor: '#353353', color:'#fff' }}>
             
             <Header></Header>
             <Outlet></Outlet>

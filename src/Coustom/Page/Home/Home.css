@@ -46,4 +46,39 @@ h2.title {
     font-size: 85px;
     z-index: -1;
     opacity: 0.07;
+
+}
+
+/* about info */
+
+
+.about-content {
+    margin-top: 30px;
+    border-radius: 10px;
+    padding: 25px 30px 15px;
+    box-shadow: 0px 5px 20px 0px rgb(71 69 97 / 70%);
+}
+
+.about-content .personal-info ul {
+    
+    flex-wrap: wrap;
+}
+
+.about-content .personal-info ul li {
+    margin-bottom: 5px;
+    max-width: 50%;
+    flex: 50%;
+}
+
+.about-content .personal-info ul li span {
+    font-size: 16px;
+    color: #fff;
+}
+
+.about-content .personal-info ul li span label {
+    color: #fff;
+    font-weight: 600;
+    min-width: 100px;
+    display: inline-block;
+    margin-bottom: 0.5rem;
 }
