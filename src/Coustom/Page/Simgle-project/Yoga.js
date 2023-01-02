@@ -29,25 +29,25 @@ const Yoga = () => {
                             >
 
                                 <div className="card w-full shadow-xl">
-                                    <figure className="px-10 pt-10">
+                                    <figure className=" pt-10">
                                         <img src={car1} alt="Shoes" className="single-img" />
                                     </figure>
 
                                 </div>
                                 <div className="card w-full shadow-xl">
-                                    <figure className="px-10 pt-10">
+                                    <figure className=" pt-10">
                                         <img src={car2} alt="Shoes" className="single-img" />
                                     </figure>
 
                                 </div>
                                 <div className="card w-full shadow-xl">
-                                    <figure className="px-10 pt-10">
+                                    <figure className=" pt-10">
                                         <img src={car3} alt="Shoes" className=" single-img" />
                                     </figure>
 
                                 </div>
                                 <div className="card w-full shadow-xl">
-                                    <figure className="px-10 pt-10">
+                                    <figure className=" pt-10">
                                         <img src={car4} alt="Shoes" className="single-img" />
                                     </figure>
 

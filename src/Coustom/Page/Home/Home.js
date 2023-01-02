@@ -60,34 +60,30 @@ const Home = () => {
                     <div className="personal-info">
                         <ul className='md:flex'>
                             <li>
-                                <span><label>Birthday:</label> 01.07.1990</span>
+                                <span><label>Birthday:</label> 9-11-199</span>
+                            </li>
+                            
+                            <li>
+                                <span><label>City:</label> Jessore, Khunla, Bangladesh</span>
                             </li>
                             <li>
-                                <span><label>Age:</label> 28</span>
+                                <span><label>Interests:</label> Blockchain</span>
                             </li>
                             <li>
-                                <span><label>City:</label> New York, USA</span>
-                            </li>
-                            <li>
-                                <span><label>Interests:</label> Soccer, UFC</span>
-                            </li>
-                            <li>
-                                <span><label>Study:</label> Chicago University</span>
+                                <span><label>Study:</label> Government Brajalal College, Khulna</span>
                             </li>
                             <li>
                                 <span><label>Degree:</label> Master</span>
                             </li>
+                            
                             <li>
-                                <span><label>Website:</label> <a href="#">www.mywebsite.com</a></span>
+                                <span><label>Mail:</label> <a href="amitpaul4550@gmail.com">amitpaul4550@gmail.com</a></span>
                             </li>
                             <li>
-                                <span><label>Mail:</label> <a href="mailto:example@gmail.com">mymail@gmail.com</a></span>
+                                <span><label>Phone:</label> <a href="#">+8801941231211</a></span>
                             </li>
                             <li>
-                                <span><label>Phone:</label> <a href="#">+77 022 177 05 05</a></span>
-                            </li>
-                            <li>
-                                <span><label>Twitter:</label> <a href="#">@myusername</a></span>
+                                <span><label>Twitter:</label> <a href="#https://twitter.com/AmitPaultl">@AmitPaultl</a></span>
                             </li>
                         </ul>
                     </div>
@@ -156,8 +152,7 @@ const Home = () => {
                             </figure>
                             <div className="card-body items-center text-center">
                                 <h2 className="text-2xl font-extrabold">	Web Development</h2>
-                                <p className=' text-xl'>Clarinet accustomed. Would legs of framework officers. We've to morning like a
-                                    contracting</p>
+                                
                             </div>
                         </div>
                         <div className="card w-full shadow-xl">
@@ -166,8 +161,7 @@ const Home = () => {
                             </figure>
                             <div className="card-body items-center text-center">
                                 <h2 className="text-2xl font-extrabold">Creative design</h2>
-                                <p className=' text-xl'>Clarinet accustomed. Would legs of framework officers. We've to morning like a
-                                    contracting</p>
+                                
                             </div>
                         </div>
                         <div className="card w-full shadow-xl">
@@ -176,8 +170,7 @@ const Home = () => {
                             </figure>
                             <div className="card-body items-center text-center">
                                 <h2 className="text-2xl font-extrabold">Fast & Optimized</h2>
-                                <p className=' text-xl'>Clarinet accustomed. Would legs of framework officers. We've to morning like a
-                                    contracting</p>
+                                
                             </div>
                         </div>
 
