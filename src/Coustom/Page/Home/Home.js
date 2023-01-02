@@ -29,7 +29,7 @@ const Home = () => {
     const [state, handleSubmit] = useForm("mlevqzpe");
     if (state.succeeded) {
         toast.success('Successfully sent!')
-      }
+    }
 
 
     return (
@@ -50,7 +50,7 @@ const Home = () => {
                                 CSS, Javascript, and programming languages. Adept at
                                 contributing to the highly collaborative work environment,
                                 finding solutions.</p>
-                            <a href='https://drive.google.com/file/d/1VZMKvrpseHRBFl_1Uux7kldtAMJdQUwt/view?usp=share_link' target={'_blank'} className="btn btn-color">DOWNLOAD RESUME</a>
+                            <a href='https://drive.google.com/file/d/1wV6ylM7Q3HYXIkojcVr3SNmXNvNkdUL_/view?usp=share_link' target={'_blank'} className="btn btn-color">DOWNLOAD RESUME</a>
                         </div>
                     </div>
                 </div>
@@ -62,7 +62,7 @@ const Home = () => {
                             <li>
                                 <span><label>Birthday:</label> 9-11-199</span>
                             </li>
-                            
+
                             <li>
                                 <span><label>City:</label> Jessore, Khunla, Bangladesh</span>
                             </li>
@@ -75,7 +75,7 @@ const Home = () => {
                             <li>
                                 <span><label>Degree:</label> Master</span>
                             </li>
-                            
+
                             <li>
                                 <span><label>Mail:</label> <a href="amitpaul4550@gmail.com">amitpaul4550@gmail.com</a></span>
                             </li>
@@ -152,7 +152,7 @@ const Home = () => {
                             </figure>
                             <div className="card-body items-center text-center">
                                 <h2 className="text-2xl font-extrabold">	Web Development</h2>
-                                
+
                             </div>
                         </div>
                         <div className="card w-full shadow-xl">
@@ -161,7 +161,7 @@ const Home = () => {
                             </figure>
                             <div className="card-body items-center text-center">
                                 <h2 className="text-2xl font-extrabold">Creative design</h2>
-                                
+
                             </div>
                         </div>
                         <div className="card w-full shadow-xl">
@@ -170,7 +170,7 @@ const Home = () => {
                             </figure>
                             <div className="card-body items-center text-center">
                                 <h2 className="text-2xl font-extrabold">Fast & Optimized</h2>
-                                
+
                             </div>
                         </div>
 
@@ -218,7 +218,7 @@ const Home = () => {
                                 <p>My web site any on create account user , seller . They  can sell and buy car . </p>
                                 <div className="card-actions justify-center">
                                     <Link to='/car' className="btn btn-primary">More</Link>
-                                   
+
                                 </div>
                             </div>
                         </div>
@@ -229,7 +229,7 @@ const Home = () => {
                                 <p>In contrast, frameworks are used to build functions. Many developers have written frameworks for Node.js like</p>
                                 <div className="card-actions justify-center">
                                     <Link to='/Training' className="btn btn-primary">More</Link>
-                                   
+
                                 </div>
                             </div>
                         </div>
@@ -240,8 +240,8 @@ const Home = () => {
                                 <p>Any one user login in my web site. and take service it very easy login system. it is use mongodb databas and jwt token so it is very high security user data</p>
                                 <p></p>
                                 <div className="card-actions justify-center">
-                                    <Link  to='yoga' className="btn btn-primary">More</Link>
-                                   
+                                    <Link to='yoga' className="btn btn-primary">More</Link>
+
                                 </div>
                             </div>
                         </div>
@@ -276,37 +276,37 @@ const Home = () => {
                         <div className="card w-full ">
                             <form onSubmit={handleSubmit}>
 
-                            
-                            <div className="contact-from">
-                                <div className="form-control">
-                                    <label className="label">
-                                        <span className="label-text text-white">Name</span>
-                                    </label>
-                                    <input type="text" name='name' placeholder="Name" className="input text-inheritt input-bordered" />
-                                </div>
-                                <div className="form-control">
-                                    <label className="label">
-                                        <span className="label-text text-white">Email</span>
-                                    </label>
-                                    <input type="email" name='email' placeholder="Email" className="input text-inheritt input-bordered" />
-                                </div>
-                                <div className="form-control">
-                                    <label className="label">
-                                        <span className="label-text text-white">Subject</span>
-                                    </label>
-                                    <input type="text" name='subject' placeholder="subject" className="input text-inheritt input-bordered" />
-                                </div>
-                                <div className="form-control">
-                                    <label className="label">
-                                        <span className="label-text text-white">Message</span>
-                                    </label>
-                                    <textarea type="text" name='text' placeholder="Message" className="input text-inheritt h-60 input-bordered" />
-                                </div>
-                                <div className="text-center my-5">
 
-                                    <button className="btn btn-color">Submit</button>
+                                <div className="contact-from">
+                                    <div className="form-control">
+                                        <label className="label">
+                                            <span className="label-text text-white">Name</span>
+                                        </label>
+                                        <input type="text" name='name' placeholder="Name" className="input text-inheritt input-bordered" />
+                                    </div>
+                                    <div className="form-control">
+                                        <label className="label">
+                                            <span className="label-text text-white">Email</span>
+                                        </label>
+                                        <input type="email" name='email' placeholder="Email" className="input text-inheritt input-bordered" />
+                                    </div>
+                                    <div className="form-control">
+                                        <label className="label">
+                                            <span className="label-text text-white">Subject</span>
+                                        </label>
+                                        <input type="text" name='subject' placeholder="subject" className="input text-inheritt input-bordered" />
+                                    </div>
+                                    <div className="form-control">
+                                        <label className="label">
+                                            <span className="label-text text-white">Message</span>
+                                        </label>
+                                        <textarea type="text" name='text' placeholder="Message" className="input text-inheritt h-60 input-bordered" />
+                                    </div>
+                                    <div className="text-center my-5">
+
+                                        <button className="btn btn-color">Submit</button>
+                                    </div>
                                 </div>
-                            </div>
 
                             </form>
                         </div>
@@ -319,10 +319,12 @@ const Home = () => {
                             <div className="social-icon flex justify-center my-3">
 
                                 <i><a href='https://www.facebook.com/profile.php?id=100006098568214' target={'_blank'}><FaFacebookF></FaFacebookF></a></i>
-                                <i><a href='#' target={'_blank'}><FaInstagram></FaInstagram></a> </i>
-                                <i><a href='#' target={'_blank'}> <FaLinkedinIn></FaLinkedinIn></a></i>
-                                <i><a href='#' target={'_blank'}> <FaTwitter></FaTwitter></a></i>
-                                <i><a href='#' target={'_blank'}><FaWhatsapp></FaWhatsapp></a> </i>
+                                <i><a href='https://www.instagram.com/amitpaul111/' target={'_blank'}><FaInstagram></FaInstagram></a> </i>
+
+                                <i><a href='https://www.linkedin.com/in/amit-paul-3a3693259/' target={'_blank'}> <FaLinkedinIn></FaLinkedinIn></a></i>
+                                <i><a href='https://twitter.com/AmitPaultl' target={'_blank'}> <FaTwitter></FaTwitter></a></i>
+                                <i><a href='https://web.whatsapp.com/' target={'_blank'}><FaWhatsapp></FaWhatsapp></a> </i>
+
 
                             </div>
 

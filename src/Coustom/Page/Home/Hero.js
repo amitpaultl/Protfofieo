@@ -40,11 +40,11 @@ const Hero = () => {
                     <div className="social-icon flex justify-center my-3">
 
                         <i><a href='https://www.facebook.com/profile.php?id=100006098568214' target={'_blank'}><FaFacebookF></FaFacebookF></a></i>
-                        <i><a href='#' target={'_blank'}><FaInstagram></FaInstagram></a> </i>
-                        <i><a href='#' target={'_blank'}> <FaLinkedinIn></FaLinkedinIn></a></i>
-                        <i><a href='#' target={'_blank'}> <FaTwitter></FaTwitter></a></i>
-                        <i><a href='#' target={'_blank'}><FaWhatsapp></FaWhatsapp></a> </i>
-
+                        <i><a href='https://www.instagram.com/amitpaul111/' target={'_blank'}><FaInstagram></FaInstagram></a> </i>
+                        <i><a href='https://www.linkedin.com/in/amit-paul-3a3693259/' target={'_blank'}> <FaLinkedinIn></FaLinkedinIn></a></i>
+                        <i><a href='https://twitter.com/AmitPaultl' target={'_blank'}> <FaTwitter></FaTwitter></a></i>
+                        <i><a href='https://web.whatsapp.com/' target={'_blank'}><FaWhatsapp></FaWhatsapp></a> </i>
+                        
                     </div>
                     <label htmlFor="my-modal-3" className="btn btn-color">CONTACT ME</label>
 
