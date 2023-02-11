@@ -2,6 +2,8 @@ import React from 'react';
 import { createBrowserRouter } from 'react-router-dom';
 import Main from '../Main/Main';
 import Home from '../Page/Home/Home';
+import Login from '../Page/Login/Login';
+import Signup from '../Page/Login/singup';
 import Car from '../Page/Simgle-project/Car';
 import Traning from '../Page/Simgle-project/Traning';
 import Yoga from '../Page/Simgle-project/Yoga';
@@ -14,6 +16,14 @@ export const router = createBrowserRouter([
             {
                 path:'/',
                 element:<Home></Home>
+            },
+            {
+                path:'/signup',
+                element:<Signup></Signup>
+            },
+            {
+                path:'/login',
+                element:<Login></Login>
             },
             {
                 path:'/car',

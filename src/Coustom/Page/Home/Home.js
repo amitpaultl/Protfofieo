@@ -24,6 +24,7 @@ import { CiLocationOn } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import { toast, Toaster } from 'react-hot-toast';
 import { useForm } from '@formspree/react';
+import About from './About';
 
 const Home = () => {
     const [state, handleSubmit] = useForm("mlevqzpe");
@@ -35,7 +36,12 @@ const Home = () => {
     return (
         <div >
             <Hero></Hero>
+            {/* set */}
+
+
+
             {/* about me  */}
+            <About></About>
             <div className="py-5" id='aboutMe'>
                 <h2 className="title text-center text-5xl font-bold py-7">
                     About <span className="color">Me</span>

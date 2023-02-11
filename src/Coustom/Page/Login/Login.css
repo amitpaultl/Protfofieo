@@ -1,0 +1,125 @@
+.form-section {
+    max-width: 600px;
+    margin: 0 auto;
+    border-radius: 10px;
+    padding: 70px;
+    background: #fff2f2;
+}
+
+ .btn-section {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+ .btn-section .link-btn {
+    padding: 8px 25px;
+    font-size: 16px;
+    border: solid 1px #fff;
+    background: #fff;
+    margin-right: 5px;
+    letter-spacing: 0.5px;
+    border-radius: 50px;
+    font-weight: 400;
+    color: #535353;
+    text-decoration: none;
+    text-decoration: blink;
+}
+
+ .btn-section .link-btn:hover {
+    color: #50a1ff;
+}
+
+ .login-inner-form {
+    color: #535353;
+    text-align: center;
+    position: relative;
+}
+
+.login-inner-form {
+    width: 100%;
+}
+
+ .login-inner-form .form-box {
+    float: left;
+    width: 100%;
+    position: relative;
+}
+
+ .login-inner-form .form-group {
+    margin-bottom: 30px;
+}
+
+ .login-inner-form .form-control {
+    width: 100%;
+    font-size: 16px;
+    outline: none;
+    color: #535353;
+    border-radius: 50px;
+    border: 1px solid #fff;
+    background: #fff;
+    padding: 15.5px 50px 15.5px 25px;
+}
+
+ .login-inner-form .btn-theme {
+    background: #50a1ff;
+    border: none;
+    color: #fff;
+    width: 100%;
+}
+
+.login-inner-form .social-list li a svg {
+    width: 100%;
+    font-size: 55px;
+}
+
+.login-inner-form .btn-theme:hover {
+    background: #ef6f19;
+}
+
+ .login-inner-form .btn-md {
+    cursor: pointer;
+    padding: 15.5px 50px 14.5px 50px;
+    font-size: 17px;
+    font-weight: 400;
+    font-family: 'Jost', sans-serif;
+    border-radius: 50px;
+}
+
+
+
+ .login-inner-form .extra-login > span {
+    width: auto;
+    float: none;
+    display: inline-block;
+    background: #fff2f2;
+    padding: 1px 20px;
+    z-index: 1;
+    position: relative;
+    font-size: 16px;
+    color: #535353;
+    text-transform: capitalize;
+}
+
+ .login-inner-form ul {
+    margin: 0;
+    padding: 0;
+}
+
+ .login-inner-form .social-list li {
+    display: inline-block;
+}
+
+ .login-inner-form .social-list li a {
+    margin: 2px;
+    font-size: 18px;
+    width: 55px;
+    height: 55px;
+    line-height: 55px;
+    border-radius: 50px;
+    display: inline-block;
+    text-align: center;
+}
+
+.loading.mx-auto {
+    background: #2d0f14;
+}
