@@ -38,14 +38,17 @@ const Header = () => {
                     </div>
                     <div className="navbar-center hidden lg:flex">
                         <ul className="menu menu-horizontal px-1">
-                            <li><Link to={'/'}>Home</Link></li>
-                            <li><a href="#aboutMe">About Me</a></li>
                             {
                                 user?.email ?
                                     <>
-                                        <li><Link onClick={ singOut}>log out</Link></li>
+                                        <li><Link to={'/'}>Home</Link></li>
+                                        <li><Link to={'/project'}>All Project</Link></li>
+                                        <li><a href="#aboutMe">About Me</a></li>
+                                        <li><Link onClick={singOut}>log out</Link></li>
                                     </> :
                                     <>
+                                        <li><Link to={'/'}>Home</Link></li>
+                                        <li><a href="#aboutMe">About Me</a></li>
                                         <li><Link to={'/signup'}>Sign Up</Link></li>
                                         <li><Link to={'/login'}>Login</Link></li>
                                     </>

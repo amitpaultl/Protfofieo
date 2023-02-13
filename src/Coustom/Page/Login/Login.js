@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { FcGoogle, IconName } from "react-icons/fc";
 import './Login.css'
 import { toast } from 'react-hot-toast';
@@ -9,6 +9,9 @@ import Loding from '../../Loding/Loding';
 const Login = () => {
     // context
     const { emailSignIn, logOut, loading, setLoading, googleSingIn } = useContext(AuthProvider);
+
+    // navigate
+    const navigate = useNavigate();
 
     // Email sign in
     const emailHandel = (e) => {
@@ -37,6 +40,7 @@ const Login = () => {
                     toast.success('Successfully login')
                 }
                 setLoading(false)
+                navigate('/')
 
             })
             .catch((error) => {

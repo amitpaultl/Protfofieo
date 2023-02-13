@@ -13,12 +13,12 @@
     border: 1px solid #7280ff;
 }
 
-.btn-color{
+.btn-color {
     background: #7280ff;
     transition: all 0.3s ease-in;
 }
 
-.btn-color:hover{
+.btn-color:hover {
     color: #7280ff;
     background-color: #fff;
 }
@@ -35,6 +35,7 @@
 h2.title {
     position: relative;
     z-index: 5;
+    color: #00ff64;
 }
 
 .title span.bg-text {
@@ -60,7 +61,7 @@ h2.title {
 }
 
 .about-content .personal-info ul {
-    
+
     flex-wrap: wrap;
 }
 
@@ -82,6 +83,71 @@ h2.title {
     display: inline-block;
     margin-bottom: 0.5rem;
 }
-.text-inheritt{
+
+.text-inheritt {
     color: #000;
+}
+
+
+.card.w-full.shadow-xl.skill-test h2 {
+    color: #f9a507;
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 17px;
+}
+
+.card.w-full.shadow-xl.skill-test {
+    padding: 33px;
+    background: black;
+    transition: .3s;
+}
+
+.card.w-full.shadow-xl.skill-test li {
+    margin-bottom: 9px;
+}
+
+.card.w-full.shadow-xl.skill-test:hover {
+    background-color: #19195b;
+}
+
+
+.card.card-compact.project.w-full.shadow-xl {
+    background: black;
+    border-radius: 0;
+}
+
+.image-wrap {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+}
+
+.image-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    transition: all 3s ease-in-out;
+}
+
+
+.buttom-area a:hover {
+    background: black;
+}
+.buttom-area a {
+    font-size: 22px;
+    background: #ff7507;
+    padding: 14px 38px;
+    transition: .3s;
+    border-radius: 0 35px;
+}
+.buttom-area {
+    text-align: center;
+    margin-top: 41px;
+}
+
+.image-wrap:hover img {
+    object-position: bottom center;
 }

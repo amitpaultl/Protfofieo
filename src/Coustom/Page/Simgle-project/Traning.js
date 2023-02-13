@@ -54,8 +54,8 @@ const Traning = () => {
                                 </div>
                             </Carousel>
 
-                            <div class="content">
-                            <h3 class="title">Training website</h3>
+                            <div className="content">
+                            <h3 className="title">Training website</h3>
                                 <p>
                                     1 . withOut login Visit checkout page. <br />
                                     2 . It is learning platform website selling course. <br />

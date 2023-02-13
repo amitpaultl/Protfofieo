@@ -54,8 +54,8 @@ const Yoga = () => {
                                 </div>
                             </Carousel>
 
-                            <div class="content">
-                                <h3 class="title">Yoga Server website</h3>
+                            <div className="content">
+                                <h3 className="title">Yoga Server website</h3>
                                 <p>
                                 1 . Authentication login system email, google <br />
                                 2 . Blog page , 404 page add, <br />

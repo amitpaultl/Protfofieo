@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useContext, useEffect, useRef, useState } from 'react';
 import Hero from './Hero';
 import './Home.css'
 import aboutme from '../../Asserts/image/depositphotos_42748913-stock-photo-about-me.jpg'
@@ -25,12 +25,41 @@ import { Link } from 'react-router-dom';
 import { toast, Toaster } from 'react-hot-toast';
 import { useForm } from '@formspree/react';
 import About from './About';
+import Skill from './Skill';
+import Project from '../Project/Project';
+import Loding from '../../Loding/Loding';
+import { AuthProvider } from '../../Context/AuthContext';
 
 const Home = () => {
     const [state, handleSubmit] = useForm("mlevqzpe");
     if (state.succeeded) {
         toast.success('Successfully sent!')
     }
+
+           // context
+           const { loading, setLoading,  } = useContext(AuthProvider);
+           const [project, setProject] = useState()
+       
+           useEffect(() => {
+               fetch('https://server-three-fawn.vercel.app/project')
+                   .then(req => req.json())
+                   .then(data => setProject(data?.data))
+           },[])
+       
+           if (project === false) {
+               setLoading(true)
+           } else {
+               setLoading(false)
+           }
+       
+           if(loading){
+               return <Loding></Loding>
+           }
+    
+           console.log(project);
+       
+           const slicesData = project?.slice(0,3)
+           console.log(slicesData);
 
 
     return (
@@ -42,25 +71,7 @@ const Home = () => {
 
             {/* about me  */}
             <About></About>
-            <div className="py-5" id='aboutMe'>
-                <h2 className="title text-center text-5xl font-bold py-7">
-                    About <span className="color">Me</span>
-                    <span className="bg-text">About</span>
-                </h2>
-                <div className="hero ">
-                    <div className="hero-content flex-col lg:flex-row ">
-                        <img src={aboutme} className="md:max-w-sm  rounded-lg shadow-2xl img-me" />
-                        <div className='w-1/2 ml-16'>
-                            <p className="py-6 text-2xl">Hi I'm Amit kumar paul. I have  over 3+ years of
-                                experience in web design and development. Experience in Html,
-                                CSS, Javascript, and programming languages. Adept at
-                                contributing to the highly collaborative work environment,
-                                finding solutions.</p>
-                            <a href='https://drive.google.com/file/d/1wV6ylM7Q3HYXIkojcVr3SNmXNvNkdUL_/view?usp=share_link' target={'_blank'} className="btn btn-color">DOWNLOAD RESUME</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
             <div className='container mx-auto'>
                 <div className="about-content ">
                     <div className="personal-info">
@@ -83,74 +94,27 @@ const Home = () => {
                             </li>
 
                             <li>
-                                <span><label>Mail:</label> <a href="amitpaul4550@gmail.com">amitpaul4550@gmail.com</a></span>
+                                <span><label>Mail:</label> <a href="amitpaul4550@gmail.com">amitkpau2@gmail.com</a></span>
                             </li>
                             <li>
                                 <span><label>Phone:</label> <a href="#">+8801941231211</a></span>
                             </li>
                             <li>
-                                <span><label>Twitter:</label> <a href="#https://twitter.com/AmitPaultl">@AmitPaultl</a></span>
+                                <span><label>Twitter:</label> <a href="https://twitter.com/AmitPaultl">@AmitPaultl</a></span>
                             </li>
                         </ul>
                     </div>
                 </div>
             </div>
-            {/* achievement */}
-            <div className="achievement">
-                <div className="container mx-auto">
-                    <div className=" gap-4  grid  md:grid-cols-4 sm:grid-cols-1">
 
-
-                        <div className="card w-full shadow-xl">
-                            <figure className="px-10 pt-10">
-                                <img src={project} alt="Shoes" className=" w-32" />
-                            </figure>
-                            <div className="card-body items-center text-center">
-                                <h2 className="text-5xl font-extrabold">80+</h2>
-                                <p className=' text-xl'>Project Done</p>
-                            </div>
-                        </div>
-                        <div className="card w-full shadow-xl">
-                            <figure className="px-10 pt-10">
-                                <img src={user} alt="Shoes" className=" w-32" />
-                            </figure>
-                            <div className="card-body items-center text-center">
-                                <h2 className="text-5xl font-extrabold">10+</h2>
-                                <p className=' text-xl'>Happy users</p>
-
-                            </div>
-                        </div>
-                        <div className="card w-full shadow-xl">
-                            <figure className="px-10 pt-10">
-                                <img src={review} alt="Shoes" className=" w-32" />
-                            </figure>
-                            <div className="card-body items-center text-center">
-                                <h2 className="text-5xl font-extrabold">9</h2>
-                                <p className=' text-xl'>Great Reviews</p>
-
-                            </div>
-                        </div>
-                        <div className="card w-full shadow-xl">
-                            <figure className="px-10 pt-10">
-                                <img src={team} alt="Shoes" className=" w-32" />
-                            </figure>
-                            <div className="card-body items-center text-center">
-                                <h2 className="text-5xl font-extrabold">50+</h2>
-                                <p className=' text-xl'>Support</p>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
             {/* my service */}
-            <div className="py-5">
+            <div className="py-24">
                 <h2 className="title text-center text-5xl font-bold py-7 mb-9">
                     My <span className="color">Service</span>
                     <span className="bg-text">Service</span>
                 </h2>
                 <div className="container mx-auto">
-                    <div className=" gap-4  grid  md:grid-cols-3 sm:grid-cols-1">
+                    <div className=" gap-8  grid  md:grid-cols-3 sm:grid-cols-1">
 
                         <div className="card w-full shadow-xl">
                             <figure className="px-10 pt-10">
@@ -179,6 +143,33 @@ const Home = () => {
 
                             </div>
                         </div>
+                        <div className="card w-full shadow-xl">
+                            <figure className="px-10 pt-10">
+                                <img src={project} alt="Shoes" className=" w-32" />
+                            </figure>
+                            <div className="card-body items-center text-center">
+                                <h2 className="text-2xl font-extrabold">	Pixel Perfect</h2>
+
+                            </div>
+                        </div>
+                        <div className="card w-full shadow-xl">
+                            <figure className="px-10 pt-10">
+                                <img src={team} alt="Shoes" className=" w-32" />
+                            </figure>
+                            <div className="card-body items-center text-center">
+                                <h2 className="text-2xl font-extrabold">Awesome Idea</h2>
+
+                            </div>
+                        </div>
+                        <div className="card w-full shadow-xl">
+                            <figure className="px-10 pt-10">
+                                <img src={review} alt="Shoes" className=" w-32" />
+                            </figure>
+                            <div className="card-body items-center text-center">
+                                <h2 className="text-2xl font-extrabold">High Quality</h2>
+
+                            </div>
+                        </div>
 
 
                     </div>
@@ -186,28 +177,8 @@ const Home = () => {
                 </div>
             </div>
             {/* my skills */}
-            <div>
+            <Skill></Skill>
 
-                <h2 className="title text-center text-5xl font-bold py-7 mb-9">
-                    My <span className="color">Skills</span>
-                    <span className="bg-text">Skills</span>
-                </h2>
-                <div className='text-center text-xl leading-10'>
-                    <p><strong>Expert:</strong>  HTML, CSS, JavaScript, Bootstrap, Tailwind CSS, ReactJS, DaisyUI</p>
-                    <p><strong>Comfortable:</strong>  NodeJS, Express.js, MongoDB, WordPress</p>
-                    <p><strong>Familiar:</strong> Material UI, Redux, Next.js, TypeScript, and React Native</p>
-                    <p><strong>Tools:</strong> Git & GitHub, NPM, Firebase, Netlify, Heroku, VS Code, Chrome DevTools, Figma, Adobe XD</p>
-                </div>
-                <div className="skill-icon md:flex justify-center my-6">
-                    <img src={react} alt="" className=' w' />
-                    <img src={tailwind} alt="" />
-                    <img src={mongodb} alt="" />
-                    <img src={node} alt="" />
-                </div>
-
-
-
-            </div>
             {/* my project */}
             <div className="py-5">
                 <h2 className="title text-center text-5xl font-bold py-7 mb-9">
@@ -215,58 +186,26 @@ const Home = () => {
                     <span className="bg-text">Project</span>
                 </h2>
                 <div className="container mx-auto">
-                    <div className=" gap-4  grid  md:grid-cols-3 sm:grid-cols-1">
+                    <div className=" gap-8  grid  md:grid-cols-3 sm:grid-cols-1">
 
-                        <div className="card card-compact  w-full  shadow-xl">
-                            <figure><img src={car} alt="Shoes" /></figure>
-                            <div className="card-body">
-                                <h2 className="card-title">Car Selling Website</h2>
-                                <p>My web site any on create account user , seller . They  can sell and buy car . </p>
-                                <div className="card-actions justify-center">
-                                    <Link to='/car' className="btn btn-primary">More</Link>
-
-                                </div>
-                            </div>
-                        </div>
-                        <div className="card card-compact w-full  shadow-xl">
-                            <figure><img src={education} alt="Shoes" /></figure>
-                            <div className="card-body">
-                                <h2 className="card-title">Training website</h2>
-                                <p>In contrast, frameworks are used to build functions. Many developers have written frameworks for Node.js like</p>
-                                <div className="card-actions justify-center">
-                                    <Link to='/Training' className="btn btn-primary">More</Link>
-
-                                </div>
-                            </div>
-                        </div>
-                        <div className="card card-compact w-full  shadow-xl">
-                            <figure><img src={yoga} alt="Shoes" /></figure>
-                            <div className="card-body">
-                                <h2 className="card-title">My Site is yoga service site</h2>
-                                <p>Any one user login in my web site. and take service it very easy login system. it is use mongodb databas and jwt token so it is very high security user data</p>
-                                <p></p>
-                                <div className="card-actions justify-center">
-                                    <Link to='yoga' className="btn btn-primary">More</Link>
-
-                                </div>
-                            </div>
-                        </div>
+                        
+                        {
+                            slicesData?.map(project => <Project key={project._id} data={project}></Project>)
+                        }
 
 
                     </div>
-
+                    <div className="buttom-area">
+                        <Link to={'/project'}>View All</Link>
+                    </div>
                 </div>
             </div>
             {/* blog area */}
 
 
-            <h2 className="title text-center text-5xl font-bold py-7 mb-9">
-                My <span className="color">Blog</span>
-                <span className="bg-text">Blog</span>
-            </h2>
-            <SimpleSwiper></SimpleSwiper>
 
             {/* concat area */}
+
             <div className=' my-24'>
                 <h2 className="title text-center text-5xl font-bold py-7 mb-9">
                     Concat <span className="color">Me</span>
@@ -341,7 +280,23 @@ const Home = () => {
 
                 </div>
             </div>
+            <section className="relative">
+                <div className="container mx-auto">
+                    <div className="grid grid-cols-1">
+                        <div>
+                            <div className="mapouter">
+                                <div className="gmap_canvas rounded-xl">
+                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d261538.06262279715!2d89.16399421712215!3d22.85985491569819!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ff73d602120427%3A0x4ebc0662266c0c9a!2sPanjia%20Secondary%20School!5e0!3m2!1sen!2sbd!4v1676211730621!5m2!1sen!2sbd" width='100%' height="450"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                    <a href="https://www.embedgooglemap.net/blog/divi-discount-code-elegant-themes-coupon"></a><br />
 
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
             <Toaster />
         </div>
     );
